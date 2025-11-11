@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>鳳凰科技教師研習營</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Noto Sans TC", sans-serif;
+      color: #fff;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(10, 15, 44, 0.85);
+      padding: 10px 20px;
+      z-index: 1000;
+    }
+    .logo { font-weight: bold; }
+    .menu-toggle { cursor: pointer; font-size: 1.5rem; }
+    nav {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: rgba(20,25,70,0.95);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    nav a {
+      padding: 15px 20px;
+      color: #fff;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    nav a:hover { background-color: #1a45ff; }
+    #hero {
+      background-image: url("image/Aaaaa.jpg");
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #hero a {
+      padding: 20px 40px;
+      background-color: #00e0ff;
+      color: #000;
+      font-size: 1.5rem;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+    @media (min-width:768px) {
+      nav { display: flex !important; position: static; flex-direction: row; background:none;}
+      .menu-toggle { display:none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">鳳凰科技教師研習營</div>
+    <div class="menu-toggle">☰</div>
+    <nav>
+      <a href="activity.html">活動內容</a>
+      <a href="traffic.html">交通資訊</a>
+      <a href="signup.html">我要報名</a>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <a href="signup.html">我要報名</a>
+  </section>
+
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector("nav");
+    menuToggle.addEventListener("click", () => {
+      nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+    });
+  </script>
+</body>
+</html>
